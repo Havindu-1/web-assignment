@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Styles/faq.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href= "Styles/Reset.css" type="text/css">
+</head>
+<body>
+    <header>
+        <section class="head">
+            <div class="leftside">
+              <img src="Images/logo1.jpg" Width="100px" height="100px" class="logo">
+            </div>
+            <div class="rightside">
+                <nav class="HEADER">
+                    <div class="navbar" id="navbar_id"> 
+                        <a href="index.html">HOME</a>
+                        <a href="About us.html">ABOUT US</a>
+                        <a href="gamestore.html">GAMES</a>
+                        <a href="Upcoming.html">UPCOMING GAMES</a>
+                        <a href="Accessories.html">ACCESSORIES</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                          <i class="fa fa-bars"></i></a>
+                      </div>          
+                </nav> 
+            </div> 
+        </section>
+    </header>
+    
+    <script>            
+      function myFunction() {
+        var navbar = document.getElementById("navbar_id");
+        if (navbar.className === "navbar") {
+            navbar.className += " responsive";
+        } else {
+            navbar.className = "navbar";
+        }
+      }
+      </script>
+      </nav>
+      <section>
+        <h1 class="font4">FREQUENT QUESTIONS AND ANSWERS</h1>
+        <details>
+            <summary>What payment methods do you accept?</summary>
+            <div class="answer">We accept all major credit cards, PayPal, and other online payment methods.</div>
+        </details>
+        
+        <details>
+            <summary>How can I contact customer support?</summary>
+            <div class="answer">You can contact our customer support via email at support@gamestore.com or through our contact form on the website.</div>
+        </details>
+        
+        <details>
+            <summary>Do you offer refunds?</summary>
+            <div class="answer">Yes, we offer refunds within 30 days of purchase, provided the game has not been downloaded or activated.</div>
+        </details>
+        
+        <details>
+            <summary>Can I play games on multiple devices?</summary>
+            <div class="answer">Yes, most of our games can be played on multiple devices, but please check the specific game’s policy for details.</div>
+        </details>
+        
+        <details>
+            <summary>Are there any discounts for students?</summary>
+            <div class="answer">Yes, we offer a 10% discount for students. Please verify your student status at checkout.</div>
+        </details>
+      </section>
+ <section>
+    <h1 class="font4">CONTACT US</h1>
+    
+    <form action="/submit" method="post">
+        <div class="name-container">
+            <div>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+        </div>
+    
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+    
+        <label for="question">Question:</label>
+        <textarea id="question" name="question" rows="4" required></textarea>
+    
+        <button type="submit" class="button">Submit</button>
+        <button type="submit" class="cancel-button">Cancel</button>
+    </form>
+    
+ </section>
+ <br>     
+
+
+     <!--footer-->
+     <footer class="footer">
+        <div class="container">
+           <br>
+            <br>
+            <hr>
+          
+           <div class="row _2">
+                
+              <div class="footer-col">
+                <h4>CUSTOMER CARE</h4>
+                <ul>
+                    <li><a href="#"><i class='fab fa-instagram'></i> Contact us</a></li>
+                    <li><a href="#"><i class='fas fa-phone'></i> Call Now 077-#######</a></li>
+                    <li><a href="#"><i class='fas fa-map-marker-alt'></i> Address</a></li>
+                    <li><a href="#"><i class='fas fa-fax'></i> FAX No +###########</a></li>
+                </ul>
+            </div>
+                <div class="footer-col">
+                    <h4>OUR COMPANY</h4>
+                    <ul>
+                        <li><a href="#">ACCESSORIES</a></li>
+                        <li><a href="#">GAMES</a></li>
+                        <li><a href="#">UPCOMING GAMES</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>SHOP</h4>
+                    <ul>
+                        <li><a href="Contact us.html">CONTACT US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">EVENTS</a></li>
+                        <li><a href="#">SHOP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>FOLLOW US</h4>
+                  <div class="social-links">
+                      <a href="https://www.instagram.com/accounts/login/?hl=en"><i class='fab fa-instagram'></i></a>
+                      <a href="https://web.facebook.com/?_rdc=1&_rdr#"><i class='fab fa-facebook'></i></a>
+                      <a href="https://x.com/?lang=en&mx=2"><i class='fab fa-twitter'></i></a>
+                      <a href="#"><i class='fab fa-youtube'></i></a>
+                  </div>
+              </div>  
+                <div class="footer-col">
+                    <h4>TOOLS</h4>
+                     <ul>
+                       <li><a href="https://www.unrealengine.com/en-US">Unreal Engine</a></li>
+                       <li><a href="https://www.unrealengine.com/en-US">MetaHuman</a></li>
+                       <li><a href="https://www.twinmotion.com/en-US">Twin Motion</a></li>
+                       <li><a href="https://unity.com/">Unity</a></li>
+                    </ul>
+               </div> 
+               <div class="footer-col">
+                <h4>MARKET PLACES</h4>
+                 <ul>
+                   <li><a href="https://www.fab.com/">Fab</a></li>
+                   <li><a href="https://www.artstation.com/?sort_by=community&dimension=all">ArtStation</a></li>
+                  
+                </ul>
+           </div> 
+           <div class="footer-col">
+            <h4>PAYMENTS</h4>
+            <div class="social-links">
+                <a href="https://www.visa.com.lk/"><i class='fab fa-cc-visa'></i></a>
+                <a href="https://web.facebook.com/?_rdc=1&_rdr#"><i class='	fab fa-cc-apple-pay'></i></a>
+                <a href="https://x.com/?lang=en&mx=2"><i class='fab fa-cc-mastercard'></i></a>
+                <a href="https://pay.amazon.com/"><i class='fab fa-amazon-pay'></i></a>
+            </div>
+        </div>  
+        <div class="footer-col">
+          <h4>SUPPORT</h4>
+          <div class="social-links">
+              <a href="https://www.playstation.com/en-us/playstation-network/"><i class='fab fa-playstation'></i></a>
+              <a href="https://discord.com/"><i class='fab fa-discord'></i></a>
+              <a href="https://www.xbox.com/en-US/live"><i class='fab fa-xbox'></i></a>
+              <a href="#"><i class='fab fa-reddit-alien'></i></a>
+          </div>
+       </div> 
+       <div class="footer-col1">
+        <h4 class="font2">Be the first with the latest news and take advantage of our special offers</h4>
+        <div class="subscribe-container">
+            <input type="text" class="text-box" placeholder="Enter your email">
+            <button class="subscribe-button">Subscribe</button>
+        </div>
+      </div> 
+            </div>
+      <hr class=>
+      <p class="font3">Copyright © since 2020 – Epic Arcade.All rights reserved.</p>
+      </div>
+      </footer>   
+       
+       
+</body>
+</html>

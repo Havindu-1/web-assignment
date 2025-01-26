@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Styles/peripherals.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="Styles/Reset.css" type="text/css">
+
+</head>
+<body>
+    <header>
+        <section class="head">
+            <div class="leftside">
+              <img src="Images/logo1.jpg" Width="100px" height="100px" class="logo">
+            </div>
+            <div class="rightside">
+                <nav class="HEADER">
+                    <div class="navbar" id="navbar_id"> 
+                        <a href="index.html">HOME</a>
+                        <a href="Accessories.html">ACCESSORIES</a>
+                        <a href="Consoles.html">CONSOLES</a>
+
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                          <i class="fa fa-bars"></i></a>
+                      </div>          
+                </nav> 
+            </div> 
+        </section>
+    </header>
+   
+    <script>            
+      function myFunction() {
+        var navbar = document.getElementById("navbar_id");
+        if (navbar.className === "navbar") {
+            navbar.className += " responsive";
+        } else {
+            navbar.className = "navbar";
+        }
+      }
+      </script>
+    <br>
+    <section>
+    <div class="hero-container">
+     <div class="hero-slide">
+  <input type="radio" name="slider" id="slide1" checked>
+  <input type="radio" name="slider" id="slide2">
+  <input type="radio" name="slider" id="slide3">
+  <input type="radio" name="slider" id="slide4">
+
+  <div class="slides">
+      <div class="slide">
+          <img src="Images/Aimage1.jpg" alt="Game Pic" class="hero-image">
+      </div>
+      <div class="slide">
+          <img src="Images/image10.webp" alt="Game Pic" class="hero-image">
+      </div>
+      <div class="slide">
+          <img src="Images/image11.webp" alt="Game Pic" class="hero-image">
+      </div>
+      <div class="slide">
+          <img src="Images/image13.jpg" alt="Game Pic" class="hero-image">
+      </div>
+  </div>
+
+  <div class="navigation">
+      <label for="slide1" class="dot"></label>
+      <label for="slide2" class="dot"></label>
+      <label for="slide3" class="dot"></label>
+      <label for="slide4" class="dot"></label>
+  </div>
+</div>
+</div>
+</section>
+ <section class="row">      
+          
+            <div class="shop-item-card">
+              <div class="image-container">
+                  <img src="Images/controller2.1.jpg" alt="Item Image" class="item-image">
+                  <div class="overlay">
+                      <div class="overlay-content">
+                          <span class="item-rating">⭐⭐⭐⭐⭐</span>
+                          <span class="item-price"><br>Original Price: $29.99</span>
+                          <span class="item-discounted-price"><br>Discounted Price: $19.99</span>
+                          <span class="item-discount"><br>Discount: 33%</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="item-details">
+                  <h2 class="item-title">Item Title</h2>
+                  <p class="item-description">This is a brief description of the item. It highlights the key features and benefits.</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="Buy">Buy Now</button>
+              </div>
+          </div>
+        
+        <div class="shop-item-card">
+          <div class="image-container">
+              <img src="Images/keyboard2.webp" alt="Item Image" class="item-image">
+              <div class="overlay">
+                  <div class="overlay-content">
+                      <span class="item-rating">⭐⭐⭐⭐⭐</span>
+                      <span class="item-price"><br>Original Price: $29.99</span>
+                      <span class="item-discounted-price"><br>Discounted Price: $19.99</span>
+                      <span class="item-discount"><br>Discount: 33%</span>
+                  </div>
+              </div>
+          </div>
+          <div class="item-details">
+              <h2 class="item-title">Item Title</h2>
+              <p class="item-description">This is a brief description of the item. It highlights the key features and benefits.</p>
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="Buy">Buy Now</button>
+          </div>
+      </div>
+      <div class="shop-item-card">
+        <div class="image-container">
+            <img src="Images/gamingmouse.webp" alt="Item Image" class="item-image">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <span class="item-rating">⭐⭐⭐⭐⭐</span>
+                    <span class="item-price"><br>Original Price: $29.99</span>
+                    <span class="item-discounted-price"><br>Discounted Price: $19.99</span>
+                    <span class="item-discount"><br>Discount: 33%</span>
+                </div>
+            </div>
+        </div>
+        <div class="item-details">
+            <h2 class="item-title">Item Title</h2>
+            <p class="item-description">This is a brief description of the item. It highlights the key features and benefits.</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="Buy">Buy Now</button>
+        </div>
+    </div>
+   
+  <div class="shop-item-card">
+    <div class="image-container">
+        <img src="Images/joystick.webp" alt="Item Image" class="item-image">
+        <div class="overlay">
+            <div class="overlay-content">
+                <span class="item-rating">⭐⭐⭐⭐⭐</span>
+                <span class="item-price"><br>Original Price: $29.99</span>
+                <span class="item-discounted-price"><br>Discounted Price: $19.99</span>
+                <span class="item-discount"><br>Discount: 33%</span>
+            </div>
+        </div>
+    </div>
+    <div class="item-details">
+        <h2 class="item-title">Item Title</h2>
+        <p class="item-description">This is a brief description of the item. It highlights the key features and benefits.</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="Buy">Buy Now</button>
+    </div>
+</div>
+
+<div class="shop-item-card">
+  <div class="image-container">
+      <img src="Images/Acrade_stick.webp" alt="Item Image" class="item-image">
+      <div class="overlay">
+          <div class="overlay-content">
+              <span class="item-rating">⭐⭐⭐⭐⭐</span>
+              <span class="item-price"><br>Original Price: $29.99</span>
+              <span class="item-discounted-price"><br>Discounted Price: $19.99</span>
+              <span class="item-discount"><br>Discount: 33%</span>
+          </div>
+      </div>
+  </div>
+  <div class="item-details">
+      <h2 class="item-title">Item Title</h2>
+      <p class="item-description">This is a brief description of the item. It highlights the key features and benefits.</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="Buy">Buy Now</button>
+  </div>
+</div>
+
+
+
+<div class="shop-item-card">
+  <div class="image-container">
+      <img src="Images/pedals.jpg" alt="Item Image" class="item-image">
+      <div class="overlay">
+          <div class="overlay-content">
+              <span class="item-rating">⭐⭐⭐⭐⭐</span>
+              <span class="item-price"><br>Original Price: $29.99</span>
+              <span class="item-discounted-price"><br>Discounted Price: $19.99</span>
+              <span class="item-discount"><br>Discount: 33%</span>
+          </div>
+      </div>
+  </div>
+  <div class="item-details">
+      <h2 class="item-title">Item Title</h2>
+      <p class="item-description">This is a brief description of the item. It highlights the key features and benefits.</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="Buy">Buy Now</button>
+  </div>
+</div>
+
+<div class="shop-item-card">
+  <div class="image-container">
+      <img src="Images/headset.webp" alt="Item Image" class="item-image">
+      <div class="overlay">
+          <div class="overlay-content">
+              <span class="item-rating">⭐⭐⭐⭐⭐</span>
+              <span class="item-price"><br>Original Price: $29.99</span>
+              <span class="item-discounted-price"><br>Discounted Price: $19.99</span>
+              <span class="item-discount"><br>Discount: 33%</span>
+          </div>
+      </div>
+  </div>
+  <div class="item-details">
+      <h2 class="item-title">Item Title</h2>
+      <p class="item-description">This is a brief description of the item. It highlights the key features and benefits.</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="Buy">Buy Now</button>
+  </div>
+</div>
+
+<div class="shop-item-card">
+    <div class="image-container">
+        <img src="Images/monitor.jpg" alt="Item Image" class="item-image">
+        <div class="overlay">
+            <div class="overlay-content">
+                <span class="item-rating">⭐⭐⭐⭐⭐</span>
+                <span class="item-price"><br>Original Price: $29.99</span>
+                <span class="item-discounted-price"><br>Discounted Price: $19.99</span>
+                <span class="item-discount"><br>Discount: 33%</span>
+            </div>
+        </div>
+    </div>
+    <div class="item-details">
+        <h2 class="item-title">Item Title</h2>
+        <p class="item-description">This is a brief description of the item. It highlights the key features and benefits.</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="Buy">Buy Now</button>
+    </div>
+  </div>
+ 
+  <div class="shop-item-card">
+    <div class="image-container">
+        <img src="Images/speaker.webp" alt="Item Image" class="item-image">
+        <div class="overlay">
+            <div class="overlay-content">
+                <span class="item-rating">⭐⭐⭐⭐⭐</span>
+                <span class="item-price"><br>Original Price: $29.99</span>
+                <span class="item-discounted-price"><br>Discounted Price: $19.99</span>
+                <span class="item-discount"><br>Discount: 33%</span>
+            </div>
+        </div>
+    </div>
+    <div class="item-details">
+        <h2 class="item-title">Item Title</h2>
+        <p class="item-description">This is a brief description of the item. It highlights the key features and benefits.</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="Buy">Buy Now</button>
+    </div>
+  </div>
+ 
+  <div class="shop-item-card">
+    <div class="image-container">
+        <img src="Images/vr1.jpg" alt="Item Image" class="item-image">
+        <div class="overlay">
+            <div class="overlay-content">
+                <span class="item-rating">⭐⭐⭐⭐⭐</span>
+                <span class="item-price"><br>Original Price: $29.99</span>
+                <span class="item-discounted-price"><br>Discounted Price: $19.99</span>
+                <span class="item-discount"><br>Discount: 33%</span>
+            </div>
+        </div>
+    </div>
+    <div class="item-details">
+        <h2 class="item-title">Item Title</h2>
+        <p class="item-description">This is a brief description of the item. It highlights the key features and benefits.</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="Buy">Buy Now</button>
+    </div>
+  </div>
+ 
+ 
+  <div class="shop-item-card">
+    <div class="image-container">
+        <img src="Images/card1.webp" alt="Item Image" class="item-image">
+        <div class="overlay">
+            <div class="overlay-content">
+                <span class="item-rating">⭐⭐⭐⭐⭐</span>
+                <span class="item-price"><br>Original Price: $29.99</span>
+                <span class="item-discounted-price"><br>Discounted Price: $19.99</span>
+                <span class="item-discount"><br>Discount: 33%</span>
+            </div>
+        </div>
+    </div>
+    <div class="item-details">
+        <h2 class="item-title">Item Title</h2>
+        <p class="item-description">This is a brief description of the item. It highlights the key features and benefits.</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="Buy">Buy Now</button>
+    </div>
+  </div>
+  <div class="shop-item-card">
+    <div class="image-container">
+        <img src="Images/webcam.jpg" alt="Item Image" class="item-image">
+        <div class="overlay">
+            <div class="overlay-content">
+                <span class="item-rating">⭐⭐⭐⭐⭐</span>
+                <span class="item-price"><br>Original Price: $29.99</span>
+                <span class="item-discounted-price"><br>Discounted Price: $19.99</span>
+                <span class="item-discount"><br>Discount: 33%</span>
+            </div>
+        </div>
+    </div>
+    <div class="item-details">
+        <h2 class="item-title">Item Title</h2>
+        <p class="item-description">This is a brief description of the item. It highlights the key features and benefits.</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="Buy">Buy Now</button>
+    </div>
+  </div>
+ 
+  <div class="shop-item-card">
+    <div class="image-container">
+        <img src="Images/chair1.webp" alt="Item Image" class="item-image">
+        <div class="overlay">
+            <div class="overlay-content">
+                <span class="item-rating">⭐⭐⭐⭐⭐</span>
+                <span class="item-price"><br>Original Price: $29.99</span>
+                <span class="item-discounted-price"><br>Discounted Price: $19.99</span>
+                <span class="item-discount"><br>Discount: 33%</span>
+            </div>
+        </div>
+    </div>
+    <div class="item-details">
+        <h2 class="item-title">Item Title</h2>
+        <p class="item-description">This is a brief description of the item. It highlights the key features and benefits.</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="Buy">Buy Now</button>
+    </div>
+  </div>
+
+      <!--footer-->   
+  <footer class="footer">
+    <div class="container">
+       <br>
+        <br>
+        <hr>
+      
+       <div class="row _2">
+            
+          <div class="footer-col">
+            <h4>CUSTOMER CARE</h4>
+            <ul>
+                <li><a href="#"><i class='fab fa-instagram'></i> Contact us</a></li>
+                <li><a href="#"><i class='fas fa-phone'></i> Call Now 077-#######</a></li>
+                <li><a href="#"><i class='fas fa-map-marker-alt'></i> Address</a></li>
+                <li><a href="#"><i class='fas fa-fax'></i> FAX No +###########</a></li>
+            </ul>
+        </div>
+            <div class="footer-col">
+                <h4>OUR COMPANY</h4>
+                <ul>
+                    <li><a href="#">ACCESSORIES</a></li>
+                    <li><a href="#">GAMES</a></li>
+                    <li><a href="#">UPCOMING GAMES</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>SHOP</h4>
+                <ul>
+                    <li><a href="Contact us.html">CONTACT US</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">EVENTS</a></li>
+                    <li><a href="#">SHOP</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+              <h4>FOLLOW US</h4>
+              <div class="social-links">
+                  <a href="https://www.instagram.com/accounts/login/?hl=en"><i class='fab fa-instagram'></i></a>
+                  <a href="https://web.facebook.com/?_rdc=1&_rdr#"><i class='fab fa-facebook'></i></a>
+                  <a href="https://x.com/?lang=en&mx=2"><i class='fab fa-twitter'></i></a>
+                  <a href="#"><i class='fab fa-youtube'></i></a>
+              </div>
+          </div>  
+            <div class="footer-col">
+                <h4>TOOLS</h4>
+                 <ul>
+                   <li><a href="https://www.unrealengine.com/en-US">Unreal Engine</a></li>
+                   <li><a href="https://www.unrealengine.com/en-US">MetaHuman</a></li>
+                   <li><a href="https://www.twinmotion.com/en-US">Twin Motion</a></li>
+                   <li><a href="https://unity.com/">Unity</a></li>
+                </ul>
+           </div> 
+           <div class="footer-col">
+            <h4>MARKET PLACES</h4>
+             <ul>
+               <li><a href="https://www.fab.com/">Fab</a></li>
+               <li><a href="https://www.artstation.com/?sort_by=community&dimension=all">ArtStation</a></li>
+              
+            </ul>
+       </div> 
+       <div class="footer-col">
+        <h4>PAYMENTS</h4>
+        <div class="social-links">
+            <a href="https://www.visa.com.lk/"><i class='fab fa-cc-visa'></i></a>
+            <a href="https://web.facebook.com/?_rdc=1&_rdr#"><i class='	fab fa-cc-apple-pay'></i></a>
+            <a href="https://x.com/?lang=en&mx=2"><i class='fab fa-cc-mastercard'></i></a>
+            <a href="https://pay.amazon.com/"><i class='fab fa-amazon-pay'></i></a>
+        </div>
+    </div>  
+    <div class="footer-col">
+      <h4>SUPPORT</h4>
+      <div class="social-links">
+          <a href="https://www.playstation.com/en-us/playstation-network/"><i class='fab fa-playstation'></i></a>
+          <a href="https://discord.com/"><i class='fab fa-discord'></i></a>
+          <a href="https://www.xbox.com/en-US/live"><i class='fab fa-xbox'></i></a>
+          <a href="#"><i class='fab fa-reddit-alien'></i></a>
+      </div>
+   </div> 
+   <div class="footer-col1">
+    <h4 class="font2">Be the first with the latest news and take advantage of our special offers</h4>
+    <div class="subscribe-container">
+        <input type="text" class="text-box" placeholder="Enter your email">
+        <button class="subscribe-button">Subscribe</button>
+    </div>
+  </div> 
+        </div>
+  <hr class=>
+  <p class="font3">Copyright © since 2020 – Epic Arcade.All rights reserved.</p>
+  </div>
+  </footer>   
+   
+   
+    
+</body>
+</html>
