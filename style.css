@@ -30,7 +30,8 @@ header{
 }
 .logo img{
     padding-left: 20px;
-    width: 50%;
+    height: 100px;
+    width: 100px;
 }
 .HEADER{
     background-color:rgb(7, 1, 20);
