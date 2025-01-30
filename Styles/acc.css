@@ -389,11 +389,9 @@ ul{
 }	
 }
 .subscribe-container {
-    display: grid;
-    grid-template-columns: auto auto; /* Two columns: Input & Button */
-    gap: 10px; /* Space between input and button */
-    justify-content: center; /* Center content horizontally */
+    display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .text-box {
@@ -425,17 +423,9 @@ ul{
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
-    .subscribe-container {
-        flex-direction: column; /* Stack input and button */
-        gap: 5px;
-    }
     .text-box {
         width: 100%; /* Full width on smaller screens */
       
-    }
-    hr {
-        margin: 20px 0;
-        border: 0.5px solid #ccc;
     }
 
     .subscribe-button {
@@ -445,11 +435,6 @@ ul{
 
     .footer-col1 {
         padding-left: 5%; /* Reduce padding on smaller screens */
-    }
-    .font3 {
-        text-align: center;
-        font-size: 14px;
-        padding-bottom: 10px;
     }
 }
 
