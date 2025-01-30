@@ -183,6 +183,54 @@ button:hover {
 		width: 100%; /* Full width for stacked inputs */
 	}
 }
+.form1 {
+	max-width: 100px;
+	margin: auto;
+	padding: 10px;
+	border: 2px solid white; /* White border */
+	border-radius: 8px;
+	background-color: #ffffff; /* White background for the form */
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+label {
+	display: block;
+	margin-bottom: 8px;
+}
+input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+.button {
+	padding: 10px 15px;
+	background-color: #222e9c; /* Ash color */
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 100%; /* Full width for the button */
+	font-size: 16px; /* Font size for better visibility */
+}
+.button:hover {
+	background-color: #261b81; /* Darker shade on hover */
+}
+.cancel-button {
+	padding: 10px 15px;
+	background-color: #a01919; /* Ash color */
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 100%; /* Full width for the button */
+	font-size: 16px; /* Font size for better visibility */
+	margin-top: 1%;
+}
+.cancel-button:hover {
+	background-color: #8f0909; /* Darker shade on hover */
+}
+ 
 .container{
     max-width: 1200px;
     margin:auto;
@@ -328,9 +376,17 @@ ul{
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
+    .subscribe-container {
+        flex-direction: column; /* Stack input and button */
+        gap: 5px;
+    }
     .text-box {
         width: 100%; /* Full width on smaller screens */
       
+    }
+    hr {
+        margin: 20px 0;
+        border: 0.5px solid #ccc;
     }
 
     .subscribe-button {
@@ -340,6 +396,11 @@ ul{
 
     .footer-col1 {
         padding-left: 5%; /* Reduce padding on smaller screens */
+    }
+    .font3 {
+        text-align: center;
+        font-size: 14px;
+        padding-bottom: 10px;
     }
 }
 
@@ -367,51 +428,3 @@ ul{
 }
 
 
-.form1 {
-	max-width: 100px;
-	margin: auto;
-	padding: 10px;
-	border: 2px solid white; /* White border */
-	border-radius: 8px;
-	background-color: #ffffff; /* White background for the form */
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-label {
-	display: block;
-	margin-bottom: 8px;
-}
-input {
-	width: 100%;
-	padding: 10px;
-	margin-bottom: 15px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-}
-.button {
-	padding: 10px 15px;
-	background-color: #222e9c; /* Ash color */
-	color: white;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	width: 100%; /* Full width for the button */
-	font-size: 16px; /* Font size for better visibility */
-}
-.button:hover {
-	background-color: #261b81; /* Darker shade on hover */
-}
-.cancel-button {
-	padding: 10px 15px;
-	background-color: #a01919; /* Ash color */
-	color: white;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	width: 100%; /* Full width for the button */
-	font-size: 16px; /* Font size for better visibility */
-	margin-top: 1%;
-}
-.cancel-button:hover {
-	background-color: #8f0909; /* Darker shade on hover */
-}
- 
