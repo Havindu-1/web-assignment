@@ -30,6 +30,9 @@ header{
    display: flex;
    align-items: center;
 }
+.logo img{
+    max-width: 65%;
+}
 
 .HEADER{
    background-color:rgb(7, 1, 20);
@@ -307,37 +310,46 @@ tfoot {
     height:300px;
 }
 @media (max-width: 768px) {
-    table {
-        display: block; /* Make the table block for mobile */
-        width: 100%; /* Full width */
+    table thead {
+        display: none; /* Hide table headers on small screens */
     }
-
-    thead, tbody, tfoot, tr, th, td {
-        display: block; /* Make all elements block */
+    
+    table tbody, table tfoot {
+        display: block;
+        width: 100%;
     }
-
-    tr {
-        margin-bottom: 15px; /* Space between rows */
+    
+    table tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        padding: 10px;
     }
-
-    td {
-        text-align: right; /* Align text to the right */
-        position: relative;
-        padding-left: 50%; /* Space for the label */
-    }
-
-    td::before {
-        content: attr(data-label); /* Use data-label for responsive labels */
-        position: absolute;
-        left: 10px;
-        width: calc(50% - 20px);
-        padding-right: 10px;
+    
+    table td {
+        display: block;
         text-align: left;
+        padding: 10px;
+        border: none;
+        position: relative;
+    }
+    
+    /* Add Labels for Each Column */
+    table td::before {
+        content: attr(data-label);
         font-weight: bold;
+        display: block;
+        color: #fff;
+        background-color: #333;
+        padding: 5px;
+        margin-bottom: 5px;
     }
 
-    tfoot td {
-        text-align: center; /* Center footer text */
+    /* Resize iframes and images for smaller screens */
+    table td iframe,
+    table td img {
+        max-width: 100%;
+        height: auto;
     }
 }
 .container{

@@ -41,6 +41,9 @@ header{
    display: flex;
    align-items: center;
 }
+.logo img{
+    max-width: 65%;
+}
 
 .HEADER{
    background-color:rgb(7, 1, 20);

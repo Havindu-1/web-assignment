@@ -29,7 +29,9 @@ header{
    display: flex;
    align-items: center;
 }
-
+.logo img{
+    max-width: 65%;
+}
 .HEADER{
    background-color:rgb(7, 1, 20);
    font-weight: bold;
@@ -115,7 +117,7 @@ font{
 p{
     font-size:18px;
     color: #fffdfd;
-    margin-left: 10%;
+
 }
 H2{ color: #fff;
     margin-left:10%;
@@ -382,11 +384,12 @@ ul{
 }	
 }
 .subscribe-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto; /* Two columns: Input & Button */
+    gap: 10px; /* Space between input and button */
+    justify-content: center; /* Center content horizontally */
     align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
-
 .text-box {
     height: 35px; /* Small height */
     width: 300px; /* Large width */
@@ -410,15 +413,23 @@ ul{
 }
 
 .footer-col1 {
-    padding-left: 10%;
+    text-align: center
 }
 
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
+    .subscribe-container {
+        flex-direction: column; /* Stack input and button */
+        gap: 5px;
+    }
     .text-box {
         width: 100%; /* Full width on smaller screens */
       
+    }
+    hr {
+        margin: 20px 0;
+        border: 0.5px solid #ccc;
     }
 
     .subscribe-button {
@@ -428,6 +439,11 @@ ul{
 
     .footer-col1 {
         padding-left: 5%; /* Reduce padding on smaller screens */
+    }
+    .font3 {
+        text-align: center;
+        font-size: 14px;
+        padding-bottom: 10px;
     }
 }
 
@@ -447,6 +463,7 @@ ul{
 .font2 {
     color: white;
     border-bottom: 1px solid #ffffff;
+    text-align: center;
 }
 .font3 {
     color: white;
