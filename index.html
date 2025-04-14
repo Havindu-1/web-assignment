@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Styles/style.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="Styles/Reset.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -25,6 +26,7 @@
                         <a href="Upcoming.html">UPCOMING GAMES</a>
                         <a href="Accessories.html">ACCESSORIES</a>
                         <a href="faq.html">FAQ</a>
+                        <a href="store.html"><button>Store <i class="fa fa-shopping-cart"></i></button></a>
                         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                           <i class="fa fa-bars"></i></a>
                       </div>          
@@ -44,25 +46,26 @@
       }
       </script>
       </nav>
-      <section>   
-         <div class="hero">
-            <video autoplay loop muted plays-inline class="bvideo"> <source src="video/Video2(1).mp4"></video>
-         </div >
-   
-         <div class="second">   
-            <h2 >PLAY.COMPETE.<br> DOMINATE.</h2>
-             <h3>UNLEASH YOUR INNER GAMER.</h3>
-             <p>Welcome to GameAura,The ultimate destination for gamers! Whether you're a casual player or a competitive pro, we bring you the latest news, and insights from the world of gaming.
-                <br> Explore in-depth game analyses, tips, and guides to level up your skills, along with breaking news on the newest releases and updates.
-                <br> Join our vibrant community, where you can discuss strategies, share your experiences, and discover your next favorite game.
-                <br>Get ready to dive into the action, challenge yourself, and experience gaming like never before. Welcome to your new gaming home!</p>
-      
-             <a href="#" class="hero-btn">EXPLORE</a>
-         </div>
-        </section>
-
+      <section class="hero-section">   
+        <div class="hero">
+            <video autoplay loop muted playsinline class="bvideo"> 
+                <source src="video/Video2(1).mp4" type="video/mp4">
+            </video>
+            <div class="overlay">
+                <div class="text-content">
+                    <h2 id="txt1">PLAY.COMPETE.<br> DOMINATE.</h2>
+                    <h3 id="txt2">UNLEASH YOUR INNER GAMER.</h3>
+                    <p>Welcome to GameAura, the ultimate destination for gamers! Whether you're a casual player or a competitive pro, we bring you the latest news and insights from the world of gaming.
+                        <br> Explore in-depth game analyses, tips, and guides to level up your skills, along with breaking news on the newest releases and updates.
+                        <br> Join our vibrant community, where you can discuss strategies, share your experiences, and discover your next favorite game.
+                        <br> Get ready to dive into the action, challenge yourself, and experience gaming like never before. Welcome to your new gaming home!</p>
+                    <a href="#" class="hero-btn">EXPLORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
         <section>
-            <h1>WHY WE DO WHAT WE DO</h1>
+            <h1 id="txt3">WHY WE DO WHAT WE DO</h1>
             <hr class="hr1">
          <div class="container1">
             <img src="Images/logo3.webp" alt="Description of Image" class="left-image">
@@ -106,7 +109,7 @@
                <div class="text-content">
                    
                    <p>The EPIC ARCADE shop has everything gamers need, from controllers and headsets to cool merch and collectibles. We offer high-quality products, special discounts, and fast shipping. With easy returns and great deals, upgrading your gaming setup has never been easier!.</p>
-                   <a href="Accessories.html" class="see-all-button"> SHOP<span class="arrow">→</span> <!-- Arrow symbol -->
+                   <a href="Accessories.html" class="see-all-button"> SHOP<span class="arrow"><i class="fa fa-shopping-cart"></i> →</span> <!-- Arrow symbol -->
                   
                     
                 </a>

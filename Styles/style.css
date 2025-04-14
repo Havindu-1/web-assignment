@@ -86,21 +86,63 @@ header{
       text-align: left;
     }
   }
-.bvideo{
-	position:relative;
-	right: 0;
-    z-index: -1;
-	margin-left: 2%;
+  .hero-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
 }
+
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 .bvideo {
-	width: 100%;
-	max-width: 100%;
-	aspect-ratio: 16 / 9; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Behind the text */
 }
-.bvideo video {
-	width: 100%;
-	height: 100%;
-	object-fit:cover;
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional: dark overlay for better text visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Above the video */
+}
+
+.text-content {
+    color: white; /* Text color */
+    text-align: center;
+    padding: 10px; /* Optional: padding for text */
+}
+
+.hero-btn {
+    background-color: #3f3d3d; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #272020; /* Button hover color */
 }
 
 p{
@@ -127,12 +169,11 @@ h1{
     list-style:decimal;
 }
 
-.hero{
-	
-	height:100vh;
-	position:absolute;
-	display:flex;
-	align-items:center;
+#txt1{
+    font-size: 80px;
+}
+#txt3{
+    padding-top:5%;
 }
 .second{
 	text-align:center; 
@@ -161,12 +202,7 @@ h1{
             margin-left:30px;
 
 }		
-.hero-btn:hover{
-	letter-spacing:0.5px; 
-	background:#069b7be7;
-	color: white; 
-	text-align: center;  
-} 
+
 .new{
 	font-size:60px;
 	color: #fff;
