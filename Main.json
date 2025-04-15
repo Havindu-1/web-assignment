@@ -1,0 +1,255 @@
+{
+    "processors": [
+      {
+        "name": "Intel Core i9-14900K",
+        "price": 100.00,
+        "discount": "20% OFF",
+        "discountedPrice": 80.00,
+        "image": "Images/processor1.jpg",
+        "ratings": "★★★★☆"
+      },
+      {
+        "name": "AMD Ryzen 9 7950X3D",
+        "price": 100.00,
+        "discount": "20% OFF",
+        "discountedPrice": 80.00,
+        "image": "Images/processor2.jpg",
+        "ratings": "★★★★☆"
+      },
+      {
+        "name": "Intel Core i7-14700K",
+        "price": 100.00,
+        "discount": "20% OFF",
+        "discountedPrice": 80.00,
+        "image": "Images/processor3.jpg",
+        "ratings": "★★★★☆"
+      },
+      {
+        "name": "AMD Ryzen 7 7800X3D",
+        "price": 100.00,
+        "discount": "20% OFF",
+        "discountedPrice": 80.00,
+        "image": "Images/processor4.jpg",
+        "ratings": "★★★★☆"
+      },
+      {
+        "name": "AMD Threadripper Pro",
+        "price": 100.00,
+        "discount": "20% OFF",
+        "discountedPrice": 80.00,
+        "image": "Images/processor5.jpg",
+        "ratings": "★★★★☆"
+      },
+      {
+        "name": "Intel Xeon W9-3495X",
+        "price": 100.00,
+        "discount": "20% OFF",
+        "discountedPrice": 80.00,
+        "image": "Images/processor6.jpg",
+        "ratings": "★★★★☆"
+      }
+    ],
+    "graphicCards": [
+      {
+        "name": "NVIDIA GeForce RTX 4090",
+        "price": 100.00,
+        "discount": "20% OFF",
+        "discountedPrice": 80.00,
+        "image": "Images/GC1.jpg",
+        "ratings": "★★★★☆"
+      },
+      {
+        "name": "AMD Radeon RX 7900 XTX",
+        "price": 100.00,
+        "discount": "20% OFF",
+        "discountedPrice": 80.00,
+        "image": "Images/GC2.jpg",
+        "ratings": "★★★★☆"
+      },
+      {
+        "name": "NVIDIA GeForce RTX 4080 Super",
+        "price": 100.00,
+        "discount": "20% OFF",
+        "discountedPrice": 80.00,
+        "image": "Images/GC3.jpg",
+        "ratings": "★★★★☆"
+      },
+      {
+        "name": "AMD Radeon RX 7900 XT",
+        "price": 100.00,
+        "discount": "20% OFF",
+        "discountedPrice": 80.00,
+        "image": "Images/GC4.jpg",
+        "ratings": "★★★★☆"
+      },
+      {
+        "name": "NVIDIA RTX A6000 / L40S",
+        "price": 100.00,
+        "discount": "20% OFF",
+        "discountedPrice": 80.00,
+        "image": "Images/GC5.jfif",
+        "ratings": "★★★★☆"
+      },
+      {
+        "name": "GeForce RTX 4090",
+        "price": 100.00,
+        "discount": "20% OFF",
+        "discountedPrice": 80.00,
+        "image": "Images/GC6.jpg",
+        "ratings": "★★★★☆"
+      }
+    ],
+    "motherboards": [
+      {
+        "name": "ASUS ROG Maximus Z790 Hero / Apex Encore",
+        "price": 100.00,
+        "discount": "20% OFF",
+        "discountedPrice": 80.00,
+        "image": "Images/MB1.jpg",
+        "ratings": "★★★★☆"
+      },
+      {
+        "name": "MSI MEG Z790 ACE / Godlike",
+        "price": 100.00,
+        "discount": "20% OFF",
+        "discountedPrice": 80.00,
+        "image": "Images/MB2.jpg",
+        "ratings": "★★★★☆"
+      },
+      
+    {
+            "name": "ASUS TUF Gaming Z790-Plus WiFi",
+            "price": 100.00,
+            "discount": "20% OFF",
+            "discountedPrice": 80.00,
+            "image": "Images/MB3.jpg",
+            "ratings": "★★★★☆"
+          },
+          {
+            "name": "MSI MAG B760 Tomahawk WiFi DDR5",
+            "price": 100.00,
+            "discount": "20% OFF",
+            "discountedPrice": 80.00,
+            "image": "Images/MB4.jpg",
+            "ratings": "★★★★☆"
+          },
+          {
+            "name": "ASUS ROG Crosshair X670E Hero / Extreme",
+            "price": 100.00,
+            "discount": "20% OFF",
+            "discountedPrice": 80.00,
+            "image": "Images/MB5.jpg",
+            "ratings": "★★★★☆"
+          },
+          {
+            "name": "MSI MEG X670E ACE / Godlike",
+            "price": 100.00,
+            "discount": "20% OFF",
+            "discountedPrice": 80.00,
+            "image": "Images/MB6.jpg",
+            "ratings": "★★★★☆"
+          }
+        ],
+        "ram": [
+          {
+            "name": "G.Skill Trident Z5 RGB DDR5-6000 CL30 (2x16GB)",
+            "price": 100.00,
+            "discount": "20% OFF",
+            "discountedPrice": 80.00,
+            "image": "Images/RAM1.jpg",
+            "ratings": "★★★★☆"
+          },
+          {
+            "name": "Corsair Dominator Platinum RGB DDR5-6000 / 6400",
+            "price": 100.00,
+            "discount": "20% OFF",
+            "discountedPrice": 80.00,
+            "image": "Images/RAM2.jpg",
+            "ratings": "★★★★☆"
+          },
+          {
+            "name": "G.Skill Ripjaws V DDR4-3600 CL16",
+            "price": 100.00,
+            "discount": "20% OFF",
+            "discountedPrice": 80.00,
+            "image": "Images/RAM3.jpg",
+            "ratings": "★★★★☆"
+          },
+          {
+            "name": "G.Skill Trident Z5 RGB DDR5-6400 CL32 (2x32GB)",
+            "price": 100.00,
+            "discount": "20% OFF",
+            "discountedPrice": 80.00,
+            "image": "Images/RAM4.jpg",
+            "ratings": "★★★★☆"
+          },
+          {
+            "name": "Kingston Fury Renegade DDR5-6400 (2x32GB or 4x32GB)",
+            "price": 100.00,
+            "discount": "20% OFF",
+            "discountedPrice": 80.00,
+            "image": "Images/RAM5.jpg",
+            "ratings": "★★★★☆"
+          },
+          {
+            "name": "Corsair Vengeance LPX DDR4-3200 (2x8GB or 2x16GB)",
+            "price": 100.00,
+            "discount": "20% OFF",
+            "discountedPrice": 80.00,
+            "image": "Images/RAM6.jpg",
+            "ratings": "★★★★☆"
+          }
+        ],
+            "storageDevices": [
+              {
+                "name": "G.Skill Trident Z5 RGB DDR5-6000 CL30 (2x16GB)",
+                "price": 100.00,
+                "discount": "20% OFF",
+                "discountedPrice": 80.00,
+                "image": "Images/SD1.jpg",
+                "ratings": "★★★★☆"
+              },
+              {
+                "name": "Corsair Dominator Platinum RGB DDR5-6000 / 6400",
+                "price": 100.00,
+                "discount": "20% OFF",
+                "discountedPrice": 80.00,
+                "image": "Images/SD2.jpg",
+                "ratings": "★★★★☆"
+              },
+              {
+                "name": "G.Skill Ripjaws V DDR4-3600 CL16",
+                "price": 100.00,
+                "discount": "20% OFF",
+                "discountedPrice": 80.00,
+                "image": "Images/SD3.jpg",
+                "ratings": "★★★★☆"
+              },
+              {
+                "name": "G.Skill Trident Z5 RGB DDR5-6400 CL32 (2x32GB)",
+                "price": 100.00,
+                "discount": "20% OFF",
+                "discountedPrice": 80.00,
+                "image": "Images/SD4.jpg",
+                "ratings": "★★★★☆"
+              },
+              {
+                "name": "Kingston Fury Renegade DDR5-6400 (2x32GB or 4x32GB)",
+                "price": 100.00,
+                "discount": "20% OFF",
+                "discountedPrice": 80.00,
+                "image": "Images/SD5.jpg",
+                "ratings": "★★★★☆"
+              },
+              {
+                "name": "Corsair Vengeance LPX DDR4-3200 (2x8GB or 2x16GB)",
+                "price": 100.00,
+                "discount": "20% OFF",
+                "discountedPrice": 80.00,
+                "image": "Images/SD6.jpg",
+                "ratings": "★★★★☆"
+              }
+            ]
+          }
+           
+    

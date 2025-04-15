@@ -1,0 +1,56 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="Styles/Payment.css">
+    </head>
+    <body>
+        <h1>Shopping Cart</h1>
+        <div class="cart-container">
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+            <div class="cart-summary">
+                <h2>Total: $<span id="total-price">0.00</span></h2>
+                <button id="checkout-button">Checkout</button>
+            </div>
+        </div>
+    
+        <h1 id="processors" class="title">Processors</h1>
+        <div class="card-container"> 
+            <div class="card">
+                <div class="image-container">
+                    <img src="Images/processor1.jpg" alt="Product Image" class="product-image">
+                    <div class="price-info">
+                        <span class="price">$100.00</span>
+                        <span class="discount">20% OFF</span>
+                        <span class="discounted-price">$80.00</span>
+                        <div class="ratings">★★★★☆</div>
+                    </div>
+                </div>
+                <h3>Intel Core i9-14900K</h3>
+                <div class="button-container">
+                    <button class="add-cart">Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+            </div>
+            <!-- Repeat similar structure for other products -->
+        </div>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
