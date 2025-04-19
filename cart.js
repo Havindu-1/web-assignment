@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('saveAsFavorite')?.addEventListener('click', saveAsFavorite);
         document.getElementById('applyFavorite')?.addEventListener('click', applyFavorite);
         document.getElementById('proceedToCheckout')?.addEventListener('click', () => {
-            alert('Checkout functionality would go here!');
+            alert('payment is done!');
         });
     }
 });

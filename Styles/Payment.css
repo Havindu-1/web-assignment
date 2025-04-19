@@ -535,6 +535,22 @@ footer {
         transform: translateX(150%);
     }
 }
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: opacity 0.5s;
+}
+
+.notification.fade-out {
+    opacity: 0;
+}
 
 /* Loading spinner animation */
 .loading-spinner {
