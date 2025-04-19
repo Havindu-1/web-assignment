@@ -1,56 +1,98 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Page</title>
+    <title>Your Cart | Game Hardware Store</title>
     <link rel="stylesheet" href="Styles/Payment.css">
-    </head>
-    <body>
-        <h1>Shopping Cart</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <section class="head">
+            <div class="leftside">
+                <div class="logo">
+                    <img src="Images/logo1.png" alt="Logo">
+                </div>           
+            </div>
+            <div class="rightside">
+                <nav class="HEADER">
+                    <div class="navbar" id="navbar_id"> 
+                        <a href="index.html">HOME</a>
+                        <a href="About us.html">ABOUT US</a>
+                        <a href="gamestore.html">GAMES</a>
+                        <a href="Upcoming.html">UPCOMING GAMES</a>
+                        <a href="Accessories.html">ACCESSORIES</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="store.html">STORE</a>
+                        <a href="Payment.html" class="active"><i class="fa fa-shopping-cart"></i> <span class="item-count">0</span></a>  
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                          <i class="fa fa-bars"></i></a>
+                    </div>          
+                </nav> 
+            </div> 
+        </section>
+    </header>
+
+    <main class="container">
+        <h1>Your Shopping Cart</h1>
+        
         <div class="cart-container">
-            <table id="cart-table">
+            <table id="cartTable">
                 <thead>
                     <tr>
+                        <th>Item</th>
                         <th>Image</th>
-                        <th>Name</th>
                         <th>Price</th>
                         <th>Quantity</th>
                         <th>Total</th>
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody id="cart-items">
-                    <!-- Cart items will be dynamically added here -->
+                <tbody id="cartItems">
+                    <!-- Cart items will be populated here -->
                 </tbody>
             </table>
+            
             <div class="cart-summary">
-                <h2>Total: $<span id="total-price">0.00</span></h2>
-                <button id="checkout-button">Checkout</button>
+                <h2>Order Summary</h2>
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Discount:</span>
+                    <span id="discount">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span id="shipping">$9.99</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">$0.00</span>
+                </div>
+                
+                <div class="cart-actions">
+                    <button id="saveAsFavorite" class="btn secondary">Save as Favorite</button>
+                    <button id="applyFavorite" class="btn secondary">Apply Favorite</button>
+                    <button id="proceedToCheckout" class="btn primary">Proceed to Checkout</button>
+                </div>
             </div>
         </div>
-    
-        <h1 id="processors" class="title">Processors</h1>
-        <div class="card-container"> 
-            <div class="card">
-                <div class="image-container">
-                    <img src="Images/processor1.jpg" alt="Product Image" class="product-image">
-                    <div class="price-info">
-                        <span class="price">$100.00</span>
-                        <span class="discount">20% OFF</span>
-                        <span class="discounted-price">$80.00</span>
-                        <div class="ratings">★★★★☆</div>
-                    </div>
-                </div>
-                <h3>Intel Core i9-14900K</h3>
-                <div class="button-container">
-                    <button class="add-cart">Add to Cart</button>
-                    <button class="buy-now">Buy Now</button>
-                </div>
-            </div>
-            <!-- Repeat similar structure for other products -->
+        
+        <div id="emptyCart" class="empty-cart-message">
+            <i class="fa fa-shopping-cart fa-4x"></i>
+            <h2>Your cart is empty</h2>
+            <p>Looks like you haven't added any items to your cart yet.</p>
+            <a href="store.html" class="btn primary">Continue Shopping</a>
         </div>
+    </main>
     
-        <script src="script.js"></script>
-    </body>
-    </html>
+    <footer>
+        <p>&copy; 2025 Game Hardware Store. All rights reserved.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
