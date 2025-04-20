@@ -1,208 +1,124 @@
-// Global variables
-let cartItems = [];
-
-// Load cart items from localStorage
-function loadCartItems() {
-    const storedCart = localStorage.getItem('cartItems');
-    if (storedCart) {
-        cartItems = JSON.parse(storedCart);
-        renderCheckoutItems();
-        updateOrderSummary();
-    } else {
-        // Redirect to cart if no items
-        window.location.href = 'Payment.html';
-    }
-}
-
-// Render checkout items
-function renderCheckoutItems() {
-    const checkoutItemsContainer = document.getElementById('checkoutItems');
+document.addEventListener('DOMContentLoaded', function() {
+    // Load cart from localStorage
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
     
-    // Clear existing items
+    // Display checkout items
+    displayCheckoutItems(cart);
+    
+    // Set up form submission
+    setupCheckoutForm();
+});
+
+// Display items in the checkout summary
+function displayCheckoutItems(cart) {
+    const checkoutItemsContainer = document.getElementById('checkoutItems');
+    if (!checkoutItemsContainer) return;
+    
+    // Clear existing checkout items
     checkoutItemsContainer.innerHTML = '';
     
-    // Add items to the checkout summary
-    cartItems.forEach(item => {
-        const itemTotal = parseFloat(item.discountedPrice) * item.quantity;
-        
+    // Display checkout items
+    cart.forEach((item) => {
         const itemElement = document.createElement('div');
         itemElement.className = 'checkout-item';
         itemElement.innerHTML = `
-            <div class="checkout-item-image">
-                <img src="${item.image}" alt="${item.name}">
+            <div class="item-details">
+                <div class="item-name">${item.name}</div>
+                <div class="item-quantity">Quantity: ${item.quantity}</div>
             </div>
-            <div class="checkout-item-details">
-                <h4>${item.name}</h4>
-                <p>$${item.discountedPrice.toFixed(2)} × ${item.quantity}</p>
-            </div>
-            <div class="checkout-item-total">
-                $${itemTotal.toFixed(2)}
-            </div>
+            <div class="item-price">$${(item.price * item.quantity).toFixed(2)}</div>
         `;
-        
         checkoutItemsContainer.appendChild(itemElement);
     });
+    
+    // Calculate and update totals
+    updateCheckoutSummary(cart);
 }
 
-// Update order summary
-function updateOrderSummary() {
-    const subtotal = cartItems.reduce((total, item) => {
-        return total + (parseFloat(item.discountedPrice) * item.quantity);
-    }, 0);
+// Update the checkout summary totals
+function updateCheckoutSummary(cart) {
+    const subtotalElement = document.getElementById('checkout-subtotal');
+    const discountElement = document.getElementById('checkout-discount');
+    const shippingElement = document.getElementById('checkout-shipping');
+    const totalElement = document.getElementById('checkout-total');
     
-    const shipping = subtotal > 0 ? 9.99 : 0;
-    const discount = 0; // Calculate if you have discount logic
-    const total = subtotal + shipping - discount;
+    // Calculate subtotal
+    const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
     
-    document.getElementById('checkout-subtotal').textContent = `$${subtotal.toFixed(2)}`;
-    document.getElementById('checkout-shipping').textContent = `$${shipping.toFixed(2)}`;
-    document.getElementById('checkout-discount').textContent = `$${discount.toFixed(2)}`;
-    document.getElementById('checkout-total').textContent = `$${total.toFixed(2)}`;
+    // Calculate discount (for example, 5% off orders over $100)
+    let discount = 0;
+    if (subtotal >= 100) {
+        discount = subtotal * 0.05;
+    }
+    
+    // Shipping cost
+    const shipping = cart.length > 0 ? 9.99 : 0;
+    
+    // Calculate total
+    const total = subtotal - discount + shipping;
+    
+    // Update elements if they exist
+    if (subtotalElement) subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+    if (discountElement) discountElement.textContent = `$${discount.toFixed(2)}`;
+    if (shippingElement) shippingElement.textContent = `$${shipping.toFixed(2)}`;
+    if (totalElement) totalElement.textContent = `$${total.toFixed(2)}`;
 }
 
-// Calculate estimated delivery date (7-10 business days from now)
-function calculateDeliveryDate() {
-    const today = new Date();
+// Set up checkout form submission and related functionality
+function setupCheckoutForm() {
+    const checkoutForm = document.getElementById('checkoutForm');
+    const thankYouModal = document.getElementById('thankYouModal');
+    const backToCartBtn = document.getElementById('backToCart');
     
-    // Add 7-10 business days (randomly choose)
-    const deliveryDays = Math.floor(Math.random() * 4) + 7; // 7-10 days
-    let businessDays = 0;
-    let currentDate = new Date(today);
-    
-    while (businessDays < deliveryDays) {
-        currentDate.setDate(currentDate.getDate() + 1);
-        // Skip weekends (0 = Sunday, 6 = Saturday)
-        if (currentDate.getDay() !== 0 && currentDate.getDay() !== 6) {
-            businessDays++;
-        }
+    // Back to cart button
+    if (backToCartBtn) {
+        backToCartBtn.addEventListener('click', function() {
+            window.location.href = 'Payment.html';
+        });
     }
     
-    // Format date as Month Day, Year
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    return currentDate.toLocaleDateString('en-US', options);
-}
-
-// Validate form fields
-function validateForm() {
-    const form = document.getElementById('checkoutForm');
-    
-    // Check all required fields
-    const requiredFields = form.querySelectorAll('[required]');
-    let isValid = true;
-    
-    requiredFields.forEach(field => {
-        if (!field.value.trim()) {
-            field.classList.add('invalid');
-            isValid = false;
-        } else {
-            field.classList.remove('invalid');
-        }
-    });
-    
-    // Validate email format
-    const emailField = document.getElementById('email');
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    
-    if (!emailPattern.test(emailField.value)) {
-        emailField.classList.add('invalid');
-        isValid = false;
+    // Form submission
+    if (checkoutForm) {
+        checkoutForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real implementation, this would process the payment
+            // For now, just show the thank you modal
+            if (thankYouModal) {
+                // Set delivery date (5 days from now)
+                const deliveryDate = new Date();
+                deliveryDate.setDate(deliveryDate.getDate() + 5);
+                const deliveryDateStr = deliveryDate.toLocaleDateString('en-US', { 
+                    weekday: 'long', 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                });
+                
+                document.getElementById('deliveryDate').textContent = deliveryDateStr;
+                
+                thankYouModal.style.display = 'block';
+                
+                // Clear cart after successful checkout
+                localStorage.setItem('cart', JSON.stringify([]));
+            }
+        });
     }
     
-    // Validate card number format (simplified)
-    const cardNumberField = document.getElementById('cardNumber');
-    const cardNumberPattern = /^\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}$/;
-    
-    if (!cardNumberPattern.test(cardNumberField.value)) {
-        cardNumberField.classList.add('invalid');
-        isValid = false;
+    // Modal close button
+    const closeModalBtn = document.querySelector('.modal .close');
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', function() {
+            thankYouModal.style.display = 'none';
+        });
     }
     
-    // Validate expiry date format (MM/YY)
-    const expiryField = document.getElementById('expiryDate');
-    const expiryPattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
-    
-    if (!expiryPattern.test(expiryField.value)) {
-        expiryField.classList.add('invalid');
-        isValid = false;
+    // Continue shopping button
+    const continueShoppingBtn = document.getElementById('continueShoppingBtn');
+    if (continueShoppingBtn) {
+        continueShoppingBtn.addEventListener('click', function() {
+            thankYouModal.style.display = 'none';
+            window.location.href = 'store.html';
+        });
     }
-    
-    // Validate CVV (3-4 digits)
-    const cvvField = document.getElementById('cvv');
-    const cvvPattern = /^\d{3,4}$/;
-    
-    if (!cvvPattern.test(cvvField.value)) {
-        cvvField.classList.add('invalid');
-        isValid = false;
-    }
-    
-    return isValid;
-}
-
-// Submit order and show thank you message
-function submitOrder(event) {
-    event.preventDefault();
-    
-    if (!validateForm()) {
-        alert('Please fill all required fields correctly.');
-        return;
-    }
-    
-    // Set delivery date
-    document.getElementById('deliveryDate').textContent = calculateDeliveryDate();
-    
-    // Show thank you modal
-    const modal = document.getElementById('thankYouModal');
-    modal.style.display = 'block';
-    
-    // Clear cart after successful order
-    localStorage.removeItem('cartItems');
-}
-
-// Initialize checkout page when loaded
-document.addEventListener('DOMContentLoaded', function() {
-    loadCartItems();
-    updateCartCount();
-    
-    // Add event listeners
-    document.getElementById('backToCart').addEventListener('click', function() {
-        window.location.href = 'Payment.html';
-    });
-    
-    document.getElementById('checkoutForm').addEventListener('submit', submitOrder);
-    
-    // Thank you modal close button
-    document.querySelector('.close').addEventListener('click', function() {
-        document.getElementById('thankYouModal').style.display = 'none';
-    });
-    
-    // Continue shopping button in modal
-    document.getElementById('continueShoppingBtn').addEventListener('click', function() {
-        window.location.href = 'store.html';
-    });
-    
-    // Handle navbar toggling
-    window.myFunction = function() {
-        var navbar = document.getElementById("navbar_id");
-        if (navbar.className === "navbar") {
-            navbar.className += " responsive";
-        } else {
-            navbar.className = "navbar";
-        }
-    };
-});
-
-// Update the cart count in the UI
-function updateCartCount() {
-    const storedCart = localStorage.getItem('cartItems');
-    let cartCount = 0;
-    
-    if (storedCart) {
-        const items = JSON.parse(storedCart);
-        cartCount = items.reduce((total, item) => total + item.quantity, 0);
-    }
-    
-    const itemCountElements = document.querySelectorAll('.item-count');
-    itemCountElements.forEach(element => {
-        element.textContent = cartCount;
-    });
 }
