@@ -7,13 +7,13 @@
 }
 
 :root {
-    --primary-color: #6c5ce7;
-    --secondary-color: #a29bfe;
-    --accent-color: #fd79a8;
+    --primary-color: #0f0650;
+    --secondary-color: #181092;
+    --accent-color: #5e0a27;
     --dark-color: #2d3436;
-    --light-color: #f5f6fa;
-    --success-color: #00b894;
-    --danger-color: #d63031;
+    --light-color: #888a91;
+    --success-color: #05fac9;
+    --danger-color: #c20909;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
