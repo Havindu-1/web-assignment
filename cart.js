@@ -371,3 +371,32 @@ function myFunction() {
         navbar.className = "navbar";
     }
 }
+// Add this to your cart.js file or modify the existing "Buy Now" button handler
+
+// Handle "Buy Now" button clicks
+document.querySelectorAll('.buy-now').forEach(button => {
+    button.addEventListener('click', function(e) {
+        // Prevent default behavior for all buttons
+        e.preventDefault();
+        
+        const card = this.closest('.card');
+        const productName = card.querySelector('h3').textContent;
+        const productImage = card.querySelector('.product-image').src;
+        const productPrice = card.querySelector('.discounted-price').textContent.replace('$', '');
+        
+        // Clear existing cart and add only this item
+        cart = [{
+            name: productName,
+            image: productImage,
+            price: parseFloat(productPrice),
+            quantity: 1
+        }];
+        
+        // Save cart to localStorage
+        saveCart();
+        updateCartCount();
+        
+        // Navigate to checkout page
+        window.location.href = "checkout.html";
+    });
+});
