@@ -1,4 +1,3 @@
-/* Base styling */
 * {
     margin: 0;
     padding: 0;
@@ -7,39 +6,44 @@
 }
 
 :root {
-    --primary-color: #6c5ce7;
-    --secondary-color: #a29bfe;
-    --accent-color: #fd79a8;
-    --dark-color: #2d3436;
-    --light-color: #f5f6fa;
+    --primary-color: #8c52ff;
+    --secondary-color: #4b30b3;
+    --accent-color: #ff5e94;
+    --dark-color: #0a0a0a;
+    --darker-color: #000000;
+    --light-color: #e0e0e0;
     --success-color: #00b894;
-    --danger-color: #d63031;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --danger-color: #ff3838;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --card-bg: #151515;
+    --text-color: #e0e0e0;
+    --nav-bg: rgba(15, 15, 20, 0.95);
 }
 
 body {
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ef 100%);
-    color: var(--dark-color);
+    background: linear-gradient(135deg, #121212 0%, #1f1f27 100%);
+    color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
 /* Header Styles */
 header {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: var(--nav-bg);
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     padding: 0.5rem 0;
     transition: var(--transition);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 header:hover {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 18px rgba(140, 82, 255, 0.15);
 }
 
 .head {
@@ -64,6 +68,7 @@ header:hover {
 
 .logo img:hover {
     transform: scale(1.05);
+    filter: drop-shadow(0 0 5px var(--primary-color));
 }
 
 .rightside {
@@ -79,13 +84,13 @@ header:hover {
 }
 
 .navbar a {
-    color: var(--dark-color);
+    color: var(--light-color);
     text-decoration: none;
     font-weight: 600;
     position: relative;
     padding: 0.5rem 0;
     font-size: 0.9rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     transition: var(--transition);
 }
 
@@ -98,10 +103,12 @@ header:hover {
     left: 0;
     background-color: var(--primary-color);
     transition: var(--transition);
+    box-shadow: 0 0 8px var(--primary-color);
 }
 
 .navbar a:hover {
     color: var(--primary-color);
+    text-shadow: 0 0 8px rgba(140, 82, 255, 0.5);
 }
 
 .navbar a:hover:before {
@@ -120,14 +127,16 @@ header:hover {
 .navbar .icon {
     display: none;
     cursor: pointer;
+    color: var(--light-color);
+    font-size: 1.2rem;
 }
 
 /* Main Navigation Bar */
 .main-navbar {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: var(--darker-color);
     padding: 0.5rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(140, 82, 255, 0.2);
 }
 
 .main-navbar ul {
@@ -135,207 +144,162 @@ header:hover {
     justify-content: center;
     list-style: none;
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
 }
 
 .main-navbar a {
-    color: var(--dark-color);
+    color: var(--light-color);
     text-decoration: none;
     font-weight: 600;
-    position: relative;
-    padding: 0.5rem 0;
-    font-size: 0.9rem;
     transition: var(--transition);
-}
-
-.main-navbar a:before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--primary-color);
-    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 
 .main-navbar a:hover {
     color: var(--primary-color);
-}
-
-.main-navbar a:hover:before {
-    width: 100%;
+    background-color: rgba(140, 82, 255, 0.1);
 }
 
 /* Title Styles */
 .title {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin: 2rem auto;
     text-align: center;
     position: relative;
     padding-bottom: 1rem;
-    color: var(--dark-color);
-    animation: fadeInDown 1s forwards;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(140, 82, 255, 0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    max-width: 1200px;
 }
 
 .title:after {
     content: '';
     position: absolute;
-    width: 80px;
+    width: 120px;
     height: 4px;
     background-color: var(--primary-color);
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 2px;
-    animation: growLine 1.2s forwards 0.5s;
-    transform-origin: center;
-    transform: translateX(-50%) scaleX(0);
+    box-shadow: 0 0 10px var(--primary-color);
 }
 
-@keyframes growLine {
-    to {
-        transform: translateX(-50%) scaleX(1);
-    }
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Card Container and Card Styles */
+/* Card Container */
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto 3rem;
     padding: 0 1rem;
 }
 
+/* Product Cards */
 .card {
-    background-color: white;
-    border-radius: 12px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
-    animation: slideUpFade 0.6s forwards;
-    transform: translateY(40px);
-    opacity: 0;
+    width: 300px;
+    border: 1px solid rgba(140, 82, 255, 0.1);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-@keyframes slideUpFade {
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(140, 82, 255, 0.25);
+    border-color: rgba(140, 82, 255, 0.3);
 }
 
 .image-container {
     position: relative;
     overflow: hidden;
-    height: 200px;
 }
 
 .product-image {
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
     transition: var(--transition);
 }
 
 .card:hover .product-image {
     transform: scale(1.05);
+    filter: brightness(0.7);
 }
 
+/* Product Info */
 .price-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     padding: 1rem;
-    color: white;
-    display: flex;
-    flex-direction: column;
+    background-color: rgba(10, 10, 15, 0.9);
+    color: var(--light-color);
 }
 
 .price {
     text-decoration: line-through;
-    opacity: 0.7;
-    font-size: 0.9rem;
+    color: #888;
+    margin-right: 0.5rem;
 }
 
 .discount {
     background-color: var(--accent-color);
+    color: white;
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     font-size: 0.8rem;
-    margin: 0.2rem 0;
-    align-self: flex-start;
+    margin-right: 0.5rem;
 }
 
 .discounted-price {
-    font-size: 1.2rem;
+    color: var(--success-color);
     font-weight: bold;
 }
 
 .ratings {
     margin-top: 0.5rem;
-    color: #f1c40f;
+    color: #ffb400;
 }
 
-h3#txt1 {
+/* Product Title */
+#txt1 {
     padding: 1rem;
     text-align: center;
+    font-weight: bold;
     font-size: 1rem;
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: var(--darker-color);
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(140, 82, 255, 0.2);
 }
 
+/* Button Container */
 .button-container {
     display: flex;
-    gap: 1rem;
-    padding: 0 1rem 1rem;
+    padding: 1rem;
+    gap: 0.5rem;
+    background-color: var(--card-bg);
 }
 
 .add-cart, .buy-now {
+    flex: 1;
     padding: 0.75rem 0;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
     transition: var(--transition);
-    flex: 1;
     text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .add-cart {
-    background-color: var(--light-color);
-    color: var(--dark-color);
-}
-
-.add-cart:hover {
     background-color: var(--dark-color);
-    color: white;
+    color: var(--light-color);
+    border: 1px solid var(--primary-color);
 }
 
 .buy-now {
@@ -343,18 +307,21 @@ h3#txt1 {
     color: white;
 }
 
+.add-cart:hover {
+    background-color: rgba(140, 82, 255, 0.2);
+    box-shadow: 0 0 15px rgba(140, 82, 255, 0.3);
+}
+
+.buy-now:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 15px rgba(140, 82, 255, 0.5);
+}
+
 .buy-now a {
     color: white;
     text-decoration: none;
     display: block;
     width: 100%;
-    height: 100%;
-}
-
-.buy-now:hover {
-    background-color: #5a49e8;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
 }
 
 /* Responsive styles */
@@ -377,10 +344,12 @@ h3#txt1 {
         right: 0;
         flex-direction: column;
         align-items: flex-start;
-        background-color: white;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        background-color: var(--nav-bg);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         z-index: 1000;
         padding: 1rem;
+        border-top: 1px solid rgba(140, 82, 255, 0.2);
+        border-bottom: 1px solid rgba(140, 82, 255, 0.2);
     }
     
     .navbar.responsive a {
@@ -388,7 +357,7 @@ h3#txt1 {
         text-align: left;
         width: 100%;
         padding: 1rem 0;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
     
     .navbar.responsive a:last-child {
@@ -400,64 +369,31 @@ h3#txt1 {
         gap: 0.5rem;
         padding: 0 1rem;
     }
-    
-    .main-navbar li {
+
+    .card-container {
+        gap: 1.5rem;
+    }
+
+    .card {
         width: 100%;
-        text-align: center;
-        padding: 0.5rem 0;
-    }
-    
-    .card-container {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
-    
-    .title {
-        font-size: 2rem;
+        max-width: 350px;
     }
 }
 
-@media screen and (max-width: 576px) {
-    .card-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .head {
-        padding: 0.5rem;
-    }
-    
-    .logo img {
-        max-height: 40px;
-    }
-    
-    .title {
-        font-size: 1.8rem;
-    }
-}
-
-/* Button hover animations */
+/* Button animation */
 .add-cart:hover, .buy-now:hover {
-    animation: btnPulse 1s infinite;
+    animation: btnPulse 1.5s infinite;
 }
 
 @keyframes btnPulse {
     0% {
-        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(140, 82, 255, 0.5);
     }
-    50% {
-        transform: scale(1.03);
+    70% {
+        box-shadow: 0 0 0 10px rgba(140, 82, 255, 0);
     }
     100% {
-        transform: scale(1);
-    }
-}
-
-/* Scroll animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(140, 82, 255, 0);
     }
 }
 
@@ -467,14 +403,14 @@ h3#txt1 {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--dark-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--secondary-color);
+    background: var(--primary-color);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-color);
+    background: var(--secondary-color);
 }
