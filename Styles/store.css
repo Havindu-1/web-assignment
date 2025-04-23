@@ -336,6 +336,25 @@ header:hover {
     display: block;
     width: 100%;
 }
+footer {
+    background-color: var(--darker-color);
+    color: var(--text-color);
+    padding: 1.5rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(140, 82, 255, 0.2);
+    margin-top: 3rem;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+footer p:hover {
+    color: var(--light-color);
+    transform: translateY(-2px);
+}
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
