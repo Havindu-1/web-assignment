@@ -284,7 +284,7 @@ function displayCartItems() {
     updateCartSummary();
 }
 
-// Update cart summary section on payment page
+
 function updateCartSummary() {
     const subtotalElement = document.getElementById('subtotal');
     const discountElement = document.getElementById('discount');
